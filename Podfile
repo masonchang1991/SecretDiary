@@ -7,4 +7,10 @@ target 'SecretDiary' do
 
   # Pods for SecretDiary
 
+  pod 'Alamofire', '4.5.1'
+  pod 'Firebase/Core', '4.1.1'
+  pod ‘FBSDKCoreKit’, '4.26.0'
+  pod ‘FBSDKShareKit’, '4.26.0'
+  pod ‘FBSDKLoginKit’, '4.26.0'
+
 end

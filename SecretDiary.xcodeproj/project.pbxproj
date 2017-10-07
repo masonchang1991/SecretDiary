@@ -16,11 +16,16 @@
 		93FA2E711F87FE7D006B9434 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FA2E6F1F87FE7D006B9434 /* LaunchScreen.storyboard */; };
 		93FA2E791F87FEA7006B9434 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FA2E781F87FEA7006B9434 /* LoginView.swift */; };
 		93FA2E7B1F87FEB4006B9434 /* LoginView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 93FA2E7A1F87FEB4006B9434 /* LoginView.xib */; };
+		AF4198A5F61C5726AF7DF9AD /* Pods_SecretDiary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5223584D83E528373E9D98AF /* Pods_SecretDiary.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		121D0D61193612C493E0CACB /* Pods-SecretDiary.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretDiary.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SecretDiary/Pods-SecretDiary.debug.xcconfig"; sourceTree = "<group>"; };
+		28DBC3DCF7D738AD79DBA243 /* Pods-SecretDiary.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SecretDiary.release.xcconfig"; path = "Pods/Target Support Files/Pods-SecretDiary/Pods-SecretDiary.release.xcconfig"; sourceTree = "<group>"; };
+		5223584D83E528373E9D98AF /* Pods_SecretDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9306D9A91F88E4100012701C /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		9306D9AC1F88EB610012701C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
+		9306D9AE1F88EF9F0012701C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93FA2E631F87FE7D006B9434 /* SecretDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FA2E661F87FE7D006B9434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93FA2E681F87FE7D006B9434 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -37,18 +42,49 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF4198A5F61C5726AF7DF9AD /* Pods_SecretDiary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10E2D5EC507AA71C6034D3C3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				121D0D61193612C493E0CACB /* Pods-SecretDiary.debug.xcconfig */,
+				28DBC3DCF7D738AD79DBA243 /* Pods-SecretDiary.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		68831D93B8B5248D533EBDF6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5223584D83E528373E9D98AF /* Pods_SecretDiary.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9306D9AB1F88EB3D0012701C /* LoginAPI */ = {
 			isa = PBXGroup;
 			children = (
+				9306D9A91F88E4100012701C /* LoginManager.swift */,
 				9306D9AC1F88EB610012701C /* LoginRouter.swift */,
 			);
 			path = LoginAPI;
+			sourceTree = "<group>";
+		};
+		9306D9AF1F8909C50012701C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				93FA2E681F87FE7D006B9434 /* LoginViewController.swift */,
+				93FA2E781F87FEA7006B9434 /* LoginView.swift */,
+				93FA2E7A1F87FEB4006B9434 /* LoginView.xib */,
+				93FA2E6A1F87FE7D006B9434 /* Main.storyboard */,
+				93FA2E6F1F87FE7D006B9434 /* LaunchScreen.storyboard */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		93FA2E5A1F87FE7D006B9434 = {
@@ -56,6 +92,8 @@
 			children = (
 				93FA2E651F87FE7D006B9434 /* SecretDiary */,
 				93FA2E641F87FE7D006B9434 /* Products */,
+				10E2D5EC507AA71C6034D3C3 /* Pods */,
+				68831D93B8B5248D533EBDF6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,14 +109,10 @@
 			isa = PBXGroup;
 			children = (
 				93FA2E661F87FE7D006B9434 /* AppDelegate.swift */,
-				93FA2E681F87FE7D006B9434 /* LoginViewController.swift */,
-				93FA2E6A1F87FE7D006B9434 /* Main.storyboard */,
-				9306D9A91F88E4100012701C /* LoginManager.swift */,
-				93FA2E781F87FEA7006B9434 /* LoginView.swift */,
-				93FA2E7A1F87FEB4006B9434 /* LoginView.xib */,
+				9306D9AF1F8909C50012701C /* View */,
 				9306D9AB1F88EB3D0012701C /* LoginAPI */,
 				93FA2E6D1F87FE7D006B9434 /* Assets.xcassets */,
-				93FA2E6F1F87FE7D006B9434 /* LaunchScreen.storyboard */,
+				9306D9AE1F88EF9F0012701C /* GoogleService-Info.plist */,
 				93FA2E721F87FE7D006B9434 /* Info.plist */,
 			);
 			path = SecretDiary;
@@ -91,9 +125,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93FA2E751F87FE7D006B9434 /* Build configuration list for PBXNativeTarget "SecretDiary" */;
 			buildPhases = (
+				B130CDA242107CA01FA7F3C0 /* [CP] Check Pods Manifest.lock */,
 				93FA2E5F1F87FE7D006B9434 /* Sources */,
 				93FA2E601F87FE7D006B9434 /* Frameworks */,
 				93FA2E611F87FE7D006B9434 /* Resources */,
+				A894BEDADBD6A83D654FECE6 /* [CP] Embed Pods Frameworks */,
+				A3F215C216DEDB86A4507214 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -151,6 +188,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A3F215C216DEDB86A4507214 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SecretDiary/Pods-SecretDiary-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A894BEDADBD6A83D654FECE6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SecretDiary/Pods-SecretDiary-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B130CDA242107CA01FA7F3C0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		93FA2E5F1F87FE7D006B9434 /* Sources */ = {
@@ -296,6 +381,7 @@
 		};
 		93FA2E761F87FE7D006B9434 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 121D0D61193612C493E0CACB /* Pods-SecretDiary.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -311,6 +397,7 @@
 		};
 		93FA2E771F87FE7D006B9434 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28DBC3DCF7D738AD79DBA243 /* Pods-SecretDiary.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
