@@ -11,6 +11,16 @@ import Foundation
 
 class LoginManager {
     
+    let loginViewController: FirebaseLoginDelegate!
+    
+    init(loginViewController: FirebaseLoginDelegate) {
+        
+        self.loginViewController = loginViewController
+        
+    }
+    
+    
+    
     func login(loginType: LoginRouter) {
         
         switch loginType {
@@ -35,22 +45,44 @@ class LoginManager {
     }
     
     
-    func fbLogin() {
+    private func fbLogin() {
+        
+        let client = FBLoginClient(loginViewController: loginViewController,
+                                   loginManager: self)
+        
+        client.login()
         
         
     }
     
-    func googleLogin() {
+    private func googleLogin() {
         
         
     }
     
-    func emailLogin() {
+    private func emailLogin() {
         
         
         
     }
-    
-    
     
 }
+
+extension LoginManager: FBLoginDelegate {
+    
+    func fbLoginManager(manager: LoginClient, didGet tokenString: String) {
+        
+        let firebaseLoginClient = FirebaseLoginClient(fbTokenString: tokenString,
+                                                      loginViewController: viewController)
+        
+        firebaseLoginClient.login()
+        
+        
+    }
+    
+    func fbLoginManager(manager: LoginClient, didFailWith error: Error?) {
+        
+    }
+    
+}
+

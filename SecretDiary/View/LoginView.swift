@@ -12,7 +12,12 @@ class LoginView: UIView {
 
     @IBOutlet var contentView: UIView!
     
+    @IBOutlet weak var fbLoginButton: UIButton!
+    
+    @IBOutlet weak var googleLoginButton: UIButton!
+    
     @IBOutlet weak var titleLabelTopConstraint: NSLayoutConstraint!
+    
     @IBOutlet weak var fbLoginButtonTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var googleLoginButtonTopConstraint: NSLayoutConstraint!

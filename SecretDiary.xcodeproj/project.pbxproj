@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		9306D9AA1F88E4100012701C /* LoginManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9A91F88E4100012701C /* LoginManager.swift */; };
 		9306D9AD1F88EB610012701C /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9AC1F88EB610012701C /* LoginRouter.swift */; };
+		9306D9B21F89133C0012701C /* FBLoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9B11F89133C0012701C /* FBLoginClient.swift */; };
+		9306D9B41F8913480012701C /* GoogleLoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9B31F8913480012701C /* GoogleLoginClient.swift */; };
+		9306D9B61F8915010012701C /* LoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9B51F8915010012701C /* LoginClient.swift */; };
+		9306D9B81F8919EE0012701C /* FBLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9B71F8919EE0012701C /* FBLoginDelegate.swift */; };
+		9306D9BA1F891D800012701C /* FirebaseLoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9B91F891D800012701C /* FirebaseLoginClient.swift */; };
+		9306D9BC1F89256E0012701C /* FirebaseLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9BB1F89256E0012701C /* FirebaseLoginDelegate.swift */; };
+		9306D9BF1F892DEE0012701C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */; };
 		93FA2E671F87FE7D006B9434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FA2E661F87FE7D006B9434 /* AppDelegate.swift */; };
 		93FA2E691F87FE7D006B9434 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FA2E681F87FE7D006B9434 /* LoginViewController.swift */; };
 		93FA2E6C1F87FE7D006B9434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FA2E6A1F87FE7D006B9434 /* Main.storyboard */; };
@@ -25,7 +32,13 @@
 		5223584D83E528373E9D98AF /* Pods_SecretDiary.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SecretDiary.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9306D9A91F88E4100012701C /* LoginManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginManager.swift; sourceTree = "<group>"; };
 		9306D9AC1F88EB610012701C /* LoginRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
-		9306D9AE1F88EF9F0012701C /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9306D9B11F89133C0012701C /* FBLoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginClient.swift; sourceTree = "<group>"; };
+		9306D9B31F8913480012701C /* GoogleLoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleLoginClient.swift; sourceTree = "<group>"; };
+		9306D9B51F8915010012701C /* LoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginClient.swift; sourceTree = "<group>"; };
+		9306D9B71F8919EE0012701C /* FBLoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBLoginDelegate.swift; sourceTree = "<group>"; };
+		9306D9B91F891D800012701C /* FirebaseLoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginClient.swift; sourceTree = "<group>"; };
+		9306D9BB1F89256E0012701C /* FirebaseLoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginDelegate.swift; sourceTree = "<group>"; };
+		9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		93FA2E631F87FE7D006B9434 /* SecretDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FA2E661F87FE7D006B9434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93FA2E681F87FE7D006B9434 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +100,19 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		9306D9B01F8912C40012701C /* LoginClient */ = {
+			isa = PBXGroup;
+			children = (
+				9306D9B51F8915010012701C /* LoginClient.swift */,
+				9306D9B11F89133C0012701C /* FBLoginClient.swift */,
+				9306D9B71F8919EE0012701C /* FBLoginDelegate.swift */,
+				9306D9B31F8913480012701C /* GoogleLoginClient.swift */,
+				9306D9B91F891D800012701C /* FirebaseLoginClient.swift */,
+				9306D9BB1F89256E0012701C /* FirebaseLoginDelegate.swift */,
+			);
+			path = LoginClient;
+			sourceTree = "<group>";
+		};
 		93FA2E5A1F87FE7D006B9434 = {
 			isa = PBXGroup;
 			children = (
@@ -112,8 +138,9 @@
 				9306D9AF1F8909C50012701C /* View */,
 				9306D9AB1F88EB3D0012701C /* LoginAPI */,
 				93FA2E6D1F87FE7D006B9434 /* Assets.xcassets */,
-				9306D9AE1F88EF9F0012701C /* GoogleService-Info.plist */,
+				9306D9B01F8912C40012701C /* LoginClient */,
 				93FA2E721F87FE7D006B9434 /* Info.plist */,
+				9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */,
 			);
 			path = SecretDiary;
 			sourceTree = "<group>";
@@ -182,6 +209,7 @@
 			files = (
 				93FA2E711F87FE7D006B9434 /* LaunchScreen.storyboard in Resources */,
 				93FA2E6E1F87FE7D006B9434 /* Assets.xcassets in Resources */,
+				9306D9BF1F892DEE0012701C /* GoogleService-Info.plist in Resources */,
 				93FA2E7B1F87FEB4006B9434 /* LoginView.xib in Resources */,
 				93FA2E6C1F87FE7D006B9434 /* Main.storyboard in Resources */,
 			);
@@ -242,11 +270,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9306D9BC1F89256E0012701C /* FirebaseLoginDelegate.swift in Sources */,
+				9306D9B41F8913480012701C /* GoogleLoginClient.swift in Sources */,
 				93FA2E791F87FEA7006B9434 /* LoginView.swift in Sources */,
 				9306D9AA1F88E4100012701C /* LoginManager.swift in Sources */,
+				9306D9B21F89133C0012701C /* FBLoginClient.swift in Sources */,
+				9306D9B61F8915010012701C /* LoginClient.swift in Sources */,
 				93FA2E691F87FE7D006B9434 /* LoginViewController.swift in Sources */,
 				9306D9AD1F88EB610012701C /* LoginRouter.swift in Sources */,
 				93FA2E671F87FE7D006B9434 /* AppDelegate.swift in Sources */,
+				9306D9B81F8919EE0012701C /* FBLoginDelegate.swift in Sources */,
+				9306D9BA1F891D800012701C /* FirebaseLoginClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
