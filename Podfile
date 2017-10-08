@@ -13,5 +13,6 @@ target 'SecretDiary' do
   pod ‘FBSDKCoreKit’, '4.26.0'
   pod ‘FBSDKShareKit’, '4.26.0'
   pod ‘FBSDKLoginKit’, '4.26.0'
+  pod 'GoogleSignIn', '4.1.0'
 
 end

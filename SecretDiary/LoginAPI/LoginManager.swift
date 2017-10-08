@@ -7,13 +7,13 @@
 //
 
 import Foundation
-
+import UIKit
 
 class LoginManager {
     
-    let loginViewController: FirebaseLoginDelegate!
+    let loginViewController: UIViewController!
     
-    init(loginViewController: FirebaseLoginDelegate) {
+    init(loginViewController: UIViewController) {
         
         self.loginViewController = loginViewController
         
@@ -57,6 +57,10 @@ class LoginManager {
     
     private func googleLogin() {
         
+        let client = GoogleLoginClient(loginViewController: loginViewController)
+        
+        client.login()
+        
         
     }
     
@@ -73,7 +77,7 @@ extension LoginManager: FBLoginDelegate {
     func fbLoginManager(manager: LoginClient, didGet tokenString: String) {
         
         let firebaseLoginClient = FirebaseLoginClient(fbTokenString: tokenString,
-                                                      loginViewController: viewController)
+                                                      loginViewController: loginViewController)
         
         firebaseLoginClient.login()
         
@@ -85,4 +89,5 @@ extension LoginManager: FBLoginDelegate {
     }
     
 }
+
 

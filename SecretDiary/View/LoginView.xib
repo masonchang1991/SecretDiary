@@ -18,11 +18,12 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LoginView" customModule="SecretDiary" customModuleProvider="target">
             <connections>
                 <outlet property="contentView" destination="iN0-l3-epB" id="55R-67-wn7"/>
-                <outlet property="emailLoginButtonTopConstraint" destination="hWH-e4-yxO" id="nhU-Hf-H26"/>
                 <outlet property="fbLoginButton" destination="Zki-Vs-KEa" id="GKp-CM-CxD"/>
                 <outlet property="fbLoginButtonTopConstraint" destination="Xrh-Sa-ARp" id="xez-lX-z0y"/>
                 <outlet property="googleLoginButton" destination="bDd-1M-Y2O" id="WGx-KH-4aA"/>
                 <outlet property="googleLoginButtonTopConstraint" destination="YUr-W2-Z0V" id="gWP-N8-T5l"/>
+                <outlet property="phoneLoginButton" destination="uvt-qi-0XQ" id="Mia-lv-ONj"/>
+                <outlet property="phoneLoginButtonTopConstraint" destination="hWH-e4-yxO" id="tZe-cT-CSf"/>
                 <outlet property="titleLabelTopConstraint" destination="KOb-tE-7J5" id="9Zp-5E-Zxc"/>
             </connections>
         </placeholder>
@@ -43,7 +44,7 @@
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uvt-qi-0XQ">
                     <rect key="frame" x="112" y="356" width="150" height="30"/>
-                    <state key="normal" title="Log in with Email"/>
+                    <state key="normal" title="Log in with Device"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zki-Vs-KEa">
                     <rect key="frame" x="112" y="176" width="150" height="30"/>

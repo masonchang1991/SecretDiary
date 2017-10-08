@@ -14,23 +14,33 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
     
     private(set) var accessToken: String?
     
+    private(set) var googleIdToken: String?
+    
     private(set) var loginType: LoginRouter
     
     private(set) var delegate: FirebaseLoginDelegate?
     
-    init(fbTokenString: String, loginViewController: FirebaseLoginDelegate) {
-        
-        self.accessToken = fbTokenString
+    init(fbTokenString: String, loginViewController: UIViewController) {
         
         self.loginType = .facebook
         
-        self.delegate = loginViewController
+        guard let viewController = loginViewController as? FirebaseLoginDelegate else {
+            return
+        }
+        
+        self.accessToken = fbTokenString
+        
+        self.delegate = viewController
         
     }
     
-    init(googleTokenString: String) {
+    init(googleIdTokenString: String, googleAccessTokenString: String, loginViewController: UIViewController?) {
         
-        self.accessToken = googleTokenString
+        self.accessToken = googleAccessTokenString
+        
+        self.googleIdToken = googleIdTokenString
+        
+        self.delegate = loginViewController as? FirebaseLoginDelegate
         
         self.loginType = .google
         
@@ -44,7 +54,9 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
             fbLogin(accessToken: accessToken)
             return
             
-        case .google: return
+        case .google:
+            googleLogin(googleIdTokenString: googleIdToken, googleAccessTokenString: accessToken)
+            return
             
         case .email: return
         
@@ -75,9 +87,32 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
         }
     }
     
-    
-    
-    
+    func googleLogin(googleIdTokenString: String?, googleAccessTokenString: String?) {
+        
+         guard
+            let idTokenString = googleIdTokenString,
+            let accessTokenString = googleAccessTokenString else { return }
+        
+        let credential = GoogleAuthProvider.credential(withIDToken: idTokenString,
+                                                       accessToken: accessTokenString)
+        
+        Auth.auth().signIn(with: credential) { (user, error) in
+            
+            if let error = error {
+               
+                self.delegate?.firebaseLogin(loginClient: self,
+                                             didFailWith: error)
+                
+                return
+            }
+            // User is signed in
+            
+            self.delegate?.firebaseLogin(loginClient: self,
+                                         didSuccessWith: LoginRouter.google)
+            
+        }
+        
+    }
     
     
 }
@@ -85,6 +120,8 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
 protocol FirebaseLogin {
     
     func fbLogin(accessToken: String?)
+    
+    func googleLogin(googleIdTokenString: String?, googleAccessTokenString: String?)
     
 }
 

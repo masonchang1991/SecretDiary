@@ -16,13 +16,15 @@ class LoginView: UIView {
     
     @IBOutlet weak var googleLoginButton: UIButton!
     
+    @IBOutlet weak var phoneLoginButton: UIButton!
+    
     @IBOutlet weak var titleLabelTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var fbLoginButtonTopConstraint: NSLayoutConstraint!
     
     @IBOutlet weak var googleLoginButtonTopConstraint: NSLayoutConstraint!
     
-    @IBOutlet weak var emailLoginButtonTopConstraint: NSLayoutConstraint!
+    @IBOutlet weak var phoneLoginButtonTopConstraint: NSLayoutConstraint!
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
@@ -48,7 +50,7 @@ class LoginView: UIView {
         titleLabelTopConstraint.constant = view.bounds.size.height * 30 / 667
         fbLoginButtonTopConstraint.constant = view.bounds.size.height * 50 / 667
         googleLoginButtonTopConstraint.constant = view.bounds.size.height * 30 / 667
-        emailLoginButtonTopConstraint.constant = view.bounds.size.height * 30 / 667
+        phoneLoginButtonTopConstraint.constant = view.bounds.size.height * 30 / 667
 
         contentView.frame = bounds
         contentView.backgroundColor = UIColor.white

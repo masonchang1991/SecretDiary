@@ -14,9 +14,11 @@ class FBLoginClient: LoginClient {
     private(set) var loginViewController: FirebaseLoginDelegate!
     private(set) var delegate: FBLoginDelegate?
     
-    init(loginViewController: FirebaseLoginDelegate, loginManager: LoginManager) {
+    init(loginViewController: UIViewController, loginManager: LoginManager) {
         
-        self.loginViewController = loginViewController
+        guard let viewController = loginViewController as? FirebaseLoginDelegate else { return }
+        
+        self.loginViewController = viewController
         
         self.delegate = loginManager
         
