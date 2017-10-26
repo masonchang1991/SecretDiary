@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="DiaryCell" id="gTV-IL-0wX" customClass="DiaryCollectionViewCell" customModule="SecretDiary" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="265" height="355"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="265" height="355"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HlH-lB-ca9">
+                        <rect key="frame" x="0.0" y="0.0" width="265" height="355"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7rC-es-Ecc">
+                                <rect key="frame" x="16" y="182" width="232" height="133"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="7rC-es-Ecc" secondAttribute="bottom" constant="40" id="5SX-Fu-SBa"/>
+                            <constraint firstItem="7rC-es-Ecc" firstAttribute="centerX" secondItem="HlH-lB-ca9" secondAttribute="centerX" id="ZHw-c6-V7f"/>
+                            <constraint firstItem="7rC-es-Ecc" firstAttribute="width" secondItem="HlH-lB-ca9" secondAttribute="width" multiplier="311:355" id="ZqL-4I-6jF"/>
+                            <constraint firstItem="7rC-es-Ecc" firstAttribute="height" secondItem="HlH-lB-ca9" secondAttribute="height" multiplier="3:8" id="baJ-SV-WfS"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="HlH-lB-ca9" secondAttribute="trailing" id="7C7-G0-D3J"/>
+                <constraint firstItem="HlH-lB-ca9" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hP4-1n-hGZ"/>
+                <constraint firstAttribute="bottom" secondItem="HlH-lB-ca9" secondAttribute="bottom" id="pQd-nZ-3ht"/>
+                <constraint firstItem="HlH-lB-ca9" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="xcA-Fb-YXB"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="265" height="355"/>
+            <connections>
+                <outlet property="diaryOwnerTableView" destination="7rC-es-Ecc" id="gBb-gJ-Qxb"/>
+                <outlet property="diaryOwnerTableViewBottomConstraint" destination="5SX-Fu-SBa" id="buq-mx-Bn2"/>
+            </connections>
+            <point key="canvasLocation" x="47.5" y="4.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

@@ -16,6 +16,12 @@
 		9306D9BA1F891D800012701C /* FirebaseLoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9B91F891D800012701C /* FirebaseLoginClient.swift */; };
 		9306D9BC1F89256E0012701C /* FirebaseLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9BB1F89256E0012701C /* FirebaseLoginDelegate.swift */; };
 		9306D9BF1F892DEE0012701C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */; };
+		933E93451F8E096E00C69796 /* DiaryMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E93441F8E096E00C69796 /* DiaryMenuViewController.swift */; };
+		933E93491F8E0A2C00C69796 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E93481F8E0A2C00C69796 /* User.swift */; };
+		933E934B1F8E0A5A00C69796 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E934A1F8E0A5A00C69796 /* Diary.swift */; };
+		933E934F1F8E171100C69796 /* DiaryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E934D1F8E171100C69796 /* DiaryCollectionViewCell.swift */; };
+		933E93501F8E171100C69796 /* DiaryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 933E934E1F8E171100C69796 /* DiaryCollectionViewCell.xib */; };
+		936F3B1F1F9DFA5600E90859 /* LineLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 936F3B1E1F9DFA5600E90859 /* LineLayout.swift */; };
 		93FA2E671F87FE7D006B9434 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FA2E661F87FE7D006B9434 /* AppDelegate.swift */; };
 		93FA2E691F87FE7D006B9434 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93FA2E681F87FE7D006B9434 /* LoginViewController.swift */; };
 		93FA2E6C1F87FE7D006B9434 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93FA2E6A1F87FE7D006B9434 /* Main.storyboard */; };
@@ -39,6 +45,12 @@
 		9306D9B91F891D800012701C /* FirebaseLoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginClient.swift; sourceTree = "<group>"; };
 		9306D9BB1F89256E0012701C /* FirebaseLoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginDelegate.swift; sourceTree = "<group>"; };
 		9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		933E93441F8E096E00C69796 /* DiaryMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMenuViewController.swift; sourceTree = "<group>"; };
+		933E93481F8E0A2C00C69796 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		933E934A1F8E0A5A00C69796 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
+		933E934D1F8E171100C69796 /* DiaryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryCollectionViewCell.swift; sourceTree = "<group>"; };
+		933E934E1F8E171100C69796 /* DiaryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DiaryCollectionViewCell.xib; sourceTree = "<group>"; };
+		936F3B1E1F9DFA5600E90859 /* LineLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineLayout.swift; sourceTree = "<group>"; };
 		93FA2E631F87FE7D006B9434 /* SecretDiary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SecretDiary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93FA2E661F87FE7D006B9434 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		93FA2E681F87FE7D006B9434 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -91,9 +103,9 @@
 		9306D9AF1F8909C50012701C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				93FA2E681F87FE7D006B9434 /* LoginViewController.swift */,
-				93FA2E781F87FEA7006B9434 /* LoginView.swift */,
-				93FA2E7A1F87FEB4006B9434 /* LoginView.xib */,
+				936F3B1D1F9DFA1C00E90859 /* DiaryCollectionViewLayout */,
+				933E934C1F8E16C600C69796 /* DiaryCell */,
+				933E93431F8E092200C69796 /* Login */,
 				93FA2E6A1F87FE7D006B9434 /* Main.storyboard */,
 				93FA2E6F1F87FE7D006B9434 /* LaunchScreen.storyboard */,
 			);
@@ -111,6 +123,68 @@
 				9306D9BB1F89256E0012701C /* FirebaseLoginDelegate.swift */,
 			);
 			path = LoginClient;
+			sourceTree = "<group>";
+		};
+		933E93411F8E08E700C69796 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				933E93471F8E0A2100C69796 /* UserModel */,
+				933E93461F8E0A1200C69796 /* DiaryModel */,
+				9306D9B01F8912C40012701C /* LoginClient */,
+				9306D9AB1F88EB3D0012701C /* LoginAPI */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		933E93421F8E090800C69796 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				93FA2E681F87FE7D006B9434 /* LoginViewController.swift */,
+				933E93441F8E096E00C69796 /* DiaryMenuViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		933E93431F8E092200C69796 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				93FA2E7A1F87FEB4006B9434 /* LoginView.xib */,
+				93FA2E781F87FEA7006B9434 /* LoginView.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		933E93461F8E0A1200C69796 /* DiaryModel */ = {
+			isa = PBXGroup;
+			children = (
+				933E934A1F8E0A5A00C69796 /* Diary.swift */,
+			);
+			path = DiaryModel;
+			sourceTree = "<group>";
+		};
+		933E93471F8E0A2100C69796 /* UserModel */ = {
+			isa = PBXGroup;
+			children = (
+				933E93481F8E0A2C00C69796 /* User.swift */,
+			);
+			path = UserModel;
+			sourceTree = "<group>";
+		};
+		933E934C1F8E16C600C69796 /* DiaryCell */ = {
+			isa = PBXGroup;
+			children = (
+				933E934D1F8E171100C69796 /* DiaryCollectionViewCell.swift */,
+				933E934E1F8E171100C69796 /* DiaryCollectionViewCell.xib */,
+			);
+			path = DiaryCell;
+			sourceTree = "<group>";
+		};
+		936F3B1D1F9DFA1C00E90859 /* DiaryCollectionViewLayout */ = {
+			isa = PBXGroup;
+			children = (
+				936F3B1E1F9DFA5600E90859 /* LineLayout.swift */,
+			);
+			path = DiaryCollectionViewLayout;
 			sourceTree = "<group>";
 		};
 		93FA2E5A1F87FE7D006B9434 = {
@@ -135,10 +209,10 @@
 			isa = PBXGroup;
 			children = (
 				93FA2E661F87FE7D006B9434 /* AppDelegate.swift */,
+				933E93421F8E090800C69796 /* ViewController */,
+				933E93411F8E08E700C69796 /* Model */,
 				9306D9AF1F8909C50012701C /* View */,
-				9306D9AB1F88EB3D0012701C /* LoginAPI */,
 				93FA2E6D1F87FE7D006B9434 /* Assets.xcassets */,
-				9306D9B01F8912C40012701C /* LoginClient */,
 				93FA2E721F87FE7D006B9434 /* Info.plist */,
 				9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */,
 			);
@@ -211,6 +285,7 @@
 				93FA2E6E1F87FE7D006B9434 /* Assets.xcassets in Resources */,
 				9306D9BF1F892DEE0012701C /* GoogleService-Info.plist in Resources */,
 				93FA2E7B1F87FEB4006B9434 /* LoginView.xib in Resources */,
+				933E93501F8E171100C69796 /* DiaryCollectionViewCell.xib in Resources */,
 				93FA2E6C1F87FE7D006B9434 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -270,11 +345,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				933E93491F8E0A2C00C69796 /* User.swift in Sources */,
+				936F3B1F1F9DFA5600E90859 /* LineLayout.swift in Sources */,
 				9306D9BC1F89256E0012701C /* FirebaseLoginDelegate.swift in Sources */,
+				933E93451F8E096E00C69796 /* DiaryMenuViewController.swift in Sources */,
 				9306D9B41F8913480012701C /* GoogleLoginClient.swift in Sources */,
+				933E934F1F8E171100C69796 /* DiaryCollectionViewCell.swift in Sources */,
 				93FA2E791F87FEA7006B9434 /* LoginView.swift in Sources */,
 				9306D9AA1F88E4100012701C /* LoginManager.swift in Sources */,
 				9306D9B21F89133C0012701C /* FBLoginClient.swift in Sources */,
+				933E934B1F8E0A5A00C69796 /* Diary.swift in Sources */,
 				9306D9B61F8915010012701C /* LoginClient.swift in Sources */,
 				93FA2E691F87FE7D006B9434 /* LoginViewController.swift in Sources */,
 				9306D9AD1F88EB610012701C /* LoginRouter.swift in Sources */,
