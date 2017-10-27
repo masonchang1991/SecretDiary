@@ -12,6 +12,7 @@ import FBSDKLoginKit
 class FBLoginClient: LoginClient {
     
     private(set) var loginViewController: FirebaseLoginDelegate!
+    
     private(set) var delegate: FBLoginDelegate?
     
     init(loginViewController: UIViewController, loginManager: LoginManager) {

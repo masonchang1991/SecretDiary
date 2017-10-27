@@ -32,6 +32,12 @@ class AddDiaryViewController: UIViewController {
 
 
     }
+    
+    func createDiary() {
+        
+        
+        
+    }
 
     
 
