@@ -16,6 +16,8 @@
 		9306D9BA1F891D800012701C /* FirebaseLoginClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9B91F891D800012701C /* FirebaseLoginClient.swift */; };
 		9306D9BC1F89256E0012701C /* FirebaseLoginDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9306D9BB1F89256E0012701C /* FirebaseLoginDelegate.swift */; };
 		9306D9BF1F892DEE0012701C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */; };
+		9337D4B11FA2D2E500975C9A /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337D4AF1FA2D2E500975C9A /* AddDiaryViewController.swift */; };
+		9337D4B21FA2D2E500975C9A /* AddDiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9337D4B01FA2D2E500975C9A /* AddDiaryViewController.xib */; };
 		933E93451F8E096E00C69796 /* DiaryMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E93441F8E096E00C69796 /* DiaryMenuViewController.swift */; };
 		933E93491F8E0A2C00C69796 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E93481F8E0A2C00C69796 /* User.swift */; };
 		933E934B1F8E0A5A00C69796 /* Diary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E934A1F8E0A5A00C69796 /* Diary.swift */; };
@@ -45,6 +47,8 @@
 		9306D9B91F891D800012701C /* FirebaseLoginClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginClient.swift; sourceTree = "<group>"; };
 		9306D9BB1F89256E0012701C /* FirebaseLoginDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseLoginDelegate.swift; sourceTree = "<group>"; };
 		9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		9337D4AF1FA2D2E500975C9A /* AddDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
+		9337D4B01FA2D2E500975C9A /* AddDiaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDiaryViewController.xib; sourceTree = "<group>"; };
 		933E93441F8E096E00C69796 /* DiaryMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMenuViewController.swift; sourceTree = "<group>"; };
 		933E93481F8E0A2C00C69796 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		933E934A1F8E0A5A00C69796 /* Diary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diary.swift; sourceTree = "<group>"; };
@@ -103,6 +107,7 @@
 		9306D9AF1F8909C50012701C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				93170ABA1FA2563500E45ED0 /* AddDiaryView */,
 				936F3B1D1F9DFA1C00E90859 /* DiaryCollectionViewLayout */,
 				933E934C1F8E16C600C69796 /* DiaryCell */,
 				933E93431F8E092200C69796 /* Login */,
@@ -125,6 +130,14 @@
 			path = LoginClient;
 			sourceTree = "<group>";
 		};
+		93170ABA1FA2563500E45ED0 /* AddDiaryView */ = {
+			isa = PBXGroup;
+			children = (
+				9337D4B01FA2D2E500975C9A /* AddDiaryViewController.xib */,
+			);
+			path = AddDiaryView;
+			sourceTree = "<group>";
+		};
 		933E93411F8E08E700C69796 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +154,7 @@
 			children = (
 				93FA2E681F87FE7D006B9434 /* LoginViewController.swift */,
 				933E93441F8E096E00C69796 /* DiaryMenuViewController.swift */,
+				9337D4AF1FA2D2E500975C9A /* AddDiaryViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -286,6 +300,7 @@
 				9306D9BF1F892DEE0012701C /* GoogleService-Info.plist in Resources */,
 				93FA2E7B1F87FEB4006B9434 /* LoginView.xib in Resources */,
 				933E93501F8E171100C69796 /* DiaryCollectionViewCell.xib in Resources */,
+				9337D4B21FA2D2E500975C9A /* AddDiaryViewController.xib in Resources */,
 				93FA2E6C1F87FE7D006B9434 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +372,7 @@
 				933E934B1F8E0A5A00C69796 /* Diary.swift in Sources */,
 				9306D9B61F8915010012701C /* LoginClient.swift in Sources */,
 				93FA2E691F87FE7D006B9434 /* LoginViewController.swift in Sources */,
+				9337D4B11FA2D2E500975C9A /* AddDiaryViewController.swift in Sources */,
 				9306D9AD1F88EB610012701C /* LoginRouter.swift in Sources */,
 				93FA2E671F87FE7D006B9434 /* AppDelegate.swift in Sources */,
 				9306D9B81F8919EE0012701C /* FBLoginDelegate.swift in Sources */,

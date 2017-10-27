@@ -135,9 +135,13 @@
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nQ-8m-g7W">
-                                <rect key="frame" x="304" y="563" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1nQ-8m-g7W">
+                                <rect key="frame" x="310" y="553" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Blu-vf-r9o"/>
+                                    <constraint firstAttribute="width" constant="40" id="x91-95-ko4"/>
+                                </constraints>
+                                <state key="normal" image="Add"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -158,6 +162,7 @@
                     <navigationItem key="navigationItem" id="MUb-jL-8B3"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
+                        <outlet property="addDiaryButton" destination="1nQ-8m-g7W" id="wJn-mP-lwX"/>
                         <outlet property="diaryMenuCollectionView" destination="ePz-4B-ly0" id="wRZ-Iu-tGz"/>
                     </connections>
                 </viewController>
@@ -180,4 +185,7 @@
             <point key="canvasLocation" x="897" y="2387"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Add" width="32" height="32"/>
+    </resources>
 </document>

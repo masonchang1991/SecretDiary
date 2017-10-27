@@ -14,6 +14,8 @@ class DiaryMenuViewController: UIViewController, UICollectionViewDataSource, UIC
     
     private var diarys: [Diary] = []
     
+    @IBOutlet weak var addDiaryButton: UIButton!
+    
     @IBOutlet weak var diaryMenuCollectionView: UICollectionView! {
         
         didSet {
@@ -31,6 +33,24 @@ class DiaryMenuViewController: UIViewController, UICollectionViewDataSource, UIC
         
         self.diaryMenuCollectionView.dataSource = self
 
+        self.addDiaryButton.addTarget(self, action: #selector(showAddDiaryBox), for: .touchUpInside)
+    }
+    
+    
+    @objc func showAddDiaryBox() {
+
+        
+        let addDiaryVC = AddDiaryViewController(nibName: "AddDiaryViewController", bundle: nil)
+        
+        self.addChildViewController(addDiaryVC)
+        
+//        addDiaryVC.view.bounds = self.view.frame // 不work
+        
+        addDiaryVC.view.frame = self.view.frame // work
+        
+        addDiaryVC .view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        
+        self.view.addSubview(addDiaryVC.view)
         
     }
     
