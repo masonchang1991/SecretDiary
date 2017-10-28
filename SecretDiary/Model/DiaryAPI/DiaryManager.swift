@@ -14,6 +14,8 @@ class DiaryManager {
     
     func createDiary() {
         
+        let client = AddDiaryClient()
+        
         
         
         
