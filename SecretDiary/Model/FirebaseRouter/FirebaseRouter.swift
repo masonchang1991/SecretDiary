@@ -13,30 +13,22 @@ enum FirebaseRouter {
     
     case addDiary
     
-    
-    
-    
-//    var ref: DatabaseReference {
-//
-//        switch self {
-//
-//        case .addDiary:
-//
-//            return DatabaseReference
-//
-//        }
-//
-//    }
+    var ref: DatabaseReference {
+
+        switch self {
+
+        case .addDiary :
+            
+            return Database.database().reference().child("Diarys")
+
+        }
+
+    }
     
     
     
 }
 
-class Aclass {
-    
-    
-    
-    
-}
+
 
 

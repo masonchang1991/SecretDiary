@@ -7,10 +7,25 @@
 //
 
 import Foundation
+import Firebase
 
 class AddDiaryClient {
     
     
+    
+    
+    func addDiary(ref: DatabaseReference, completion: @escaping ((Bool, String) -> Void)) {
+        
+        
+        
+        
+        
+        
+    }
+    
+    
+    
+
     
     
     

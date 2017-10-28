@@ -8,18 +8,45 @@
 
 import Foundation
 
+protocol DiaryManagerDelegate: class {
+    
+    func manager(_ manager: DiaryManager, type: String, ifSuccess: Bool)
+    
+}
+
+
+
 class DiaryManager {
     
+    weak var delegate: DiaryManagerDelegate?
     
     
-    func createDiary() {
+    func diary(diaryRouter: FirebaseRouter) {
         
-        let client = AddDiaryClient()
-        
+        switch diaryRouter {
+            
+        case .addDiary:
+            
+            let client = AddDiaryClient()
+            
+            client.addDiary(ref: diaryRouter.ref, completion: { (ifSuccess, type) in
+                
+                
+                self.delegate?.manager(self, type: type, ifSuccess: ifSuccess)
+                
+                
+            })
+            
+
+            
+        }
         
         
         
     }
+    
+    
+
     
     
     
