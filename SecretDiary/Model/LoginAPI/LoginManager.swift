@@ -11,12 +11,16 @@ import UIKit
 
 class LoginManager {
     
-    let loginViewController: UIViewController!
+    weak var loginViewController: UIViewController!
     
     init(loginViewController: UIViewController) {
         
         self.loginViewController = loginViewController
         
+    }
+    
+    deinit {
+        print("LoginManager gone")
     }
     
     func login(loginType: LoginRouter) {

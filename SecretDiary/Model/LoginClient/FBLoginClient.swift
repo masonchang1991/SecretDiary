@@ -25,6 +25,10 @@ class FBLoginClient: LoginClient {
         
     }
     
+    deinit {
+        print("FBLoginClient gone")
+    }
+    
     func login() {
         
         guard let viewController = loginViewController as? UIViewController else {

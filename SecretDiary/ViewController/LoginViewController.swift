@@ -70,6 +70,10 @@ class LoginViewController: UIViewController {
         
     }
     
+    deinit {
+        print("LoginviewController gone")
+    }
+    
 }
 
 extension LoginViewController: FirebaseLoginDelegate {
@@ -77,6 +81,26 @@ extension LoginViewController: FirebaseLoginDelegate {
     func firebaseLogin(loginClient: FirebaseLoginClient, didSuccessWith loginType: LoginRouter) {
         
         print(loginType)
+        
+        guard let window = UIApplication.shared.keyWindow else {
+            return
+        }
+        
+        guard let rootViewController = window.rootViewController else {
+            return
+        }
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let mainTabbar = storyboard.instantiateViewController(withIdentifier: "MainTabbar")
+        mainTabbar.view.frame = rootViewController.view.frame
+        mainTabbar.view.layoutIfNeeded()
+        
+        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+            window.rootViewController = mainTabbar
+        }, completion: { completed in
+            // maybe do something here
+            print("success change root view controller")
+        })
         
     }
     

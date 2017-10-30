@@ -43,7 +43,7 @@
         <!--Tab Bar Controller-->
         <scene sceneID="mua-3r-vl2">
             <objects>
-                <tabBarController id="NEP-JM-A5o" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="MainTabbar" id="NEP-JM-A5o" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="k4o-YX-1ZX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -65,7 +65,7 @@
                 <navigationController id="8Tf-E6-vVI" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="LOY-KP-ODO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="xqE-gz-kJ5">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
@@ -82,7 +82,7 @@
                 <navigationController id="Pgj-Kc-BKP" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="t5Q-Ki-5gt"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pV7-nL-5W2">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
@@ -176,7 +176,7 @@
                 <navigationController id="FRK-RE-7MC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="WVG-1l-irH"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rYF-t8-aqe">
-                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="48"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                 </navigationController>
