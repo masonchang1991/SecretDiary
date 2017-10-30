@@ -19,6 +19,7 @@
 		9306D9BF1F892DEE0012701C /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */; };
 		930A1EAE1FA3A7C1005A67B1 /* DiaryManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A1EAD1FA3A7C1005A67B1 /* DiaryManager.swift */; };
 		930A1EB01FA3A98E005A67B1 /* AddDiaryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930A1EAF1FA3A98E005A67B1 /* AddDiaryClient.swift */; };
+		930B98BD1FA75ED600EC0330 /* ViewDiarysClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 930B98BC1FA75ED600EC0330 /* ViewDiarysClient.swift */; };
 		9337D4B11FA2D2E500975C9A /* AddDiaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9337D4AF1FA2D2E500975C9A /* AddDiaryViewController.swift */; };
 		9337D4B21FA2D2E500975C9A /* AddDiaryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9337D4B01FA2D2E500975C9A /* AddDiaryViewController.xib */; };
 		933E93451F8E096E00C69796 /* DiaryMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 933E93441F8E096E00C69796 /* DiaryMenuViewController.swift */; };
@@ -53,6 +54,7 @@
 		9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		930A1EAD1FA3A7C1005A67B1 /* DiaryManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryManager.swift; sourceTree = "<group>"; };
 		930A1EAF1FA3A98E005A67B1 /* AddDiaryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryClient.swift; sourceTree = "<group>"; };
+		930B98BC1FA75ED600EC0330 /* ViewDiarysClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewDiarysClient.swift; sourceTree = "<group>"; };
 		9337D4AF1FA2D2E500975C9A /* AddDiaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddDiaryViewController.swift; sourceTree = "<group>"; };
 		9337D4B01FA2D2E500975C9A /* AddDiaryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddDiaryViewController.xib; sourceTree = "<group>"; };
 		933E93441F8E096E00C69796 /* DiaryMenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryMenuViewController.swift; sourceTree = "<group>"; };
@@ -146,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				930A1EAF1FA3A98E005A67B1 /* AddDiaryClient.swift */,
+				930B98BC1FA75ED600EC0330 /* ViewDiarysClient.swift */,
 			);
 			path = DiaryClient;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				9306D9AA1F88E4100012701C /* LoginManager.swift in Sources */,
 				9306D9B21F89133C0012701C /* FBLoginClient.swift in Sources */,
 				933E934B1F8E0A5A00C69796 /* Diary.swift in Sources */,
+				930B98BD1FA75ED600EC0330 /* ViewDiarysClient.swift in Sources */,
 				9306D9B61F8915010012701C /* LoginClient.swift in Sources */,
 				930A1EAE1FA3A7C1005A67B1 /* DiaryManager.swift in Sources */,
 				93FA2E691F87FE7D006B9434 /* LoginViewController.swift in Sources */,

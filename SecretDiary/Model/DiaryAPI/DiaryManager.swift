@@ -12,6 +12,7 @@ protocol DiaryManagerDelegate: class {
     
     func manager(_ manager: DiaryManager, type: FirebaseRouter)
     
+    
 }
 
 
@@ -35,6 +36,18 @@ class DiaryManager {
                 self.delegate?.manager(self, type: diaryRouter)
                 
             })
+        case .viewDiary:
+            
+            let client = ViewDiaryClient()
+            
+            client.getDiarys(ref: diaryRouter.ref, completion: { (diarys) -> (Void) in
+                
+                let viewDiaryRouter = FirebaseRouter.viewDiary(diarys)
+                
+                self.delegate?.manager(self, type: viewDiaryRouter)
+                                
+            })
+            
             
         }
         

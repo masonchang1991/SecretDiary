@@ -34,6 +34,18 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
         
         self.userData = userData
         
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            
+            if let name = self.userData["name"] {
+            
+                appDelegate?.user = User(name: name, uid: uid)
+                
+            }
+            
+        }
+        
         self.delegate = viewController
         
     }
@@ -47,6 +59,18 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
         self.delegate = loginViewController as? FirebaseLoginDelegate
         
         self.userData = userData
+        
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        if let uid = Auth.auth().currentUser?.uid {
+            
+            if let name = self.userData["name"] {
+                
+                appDelegate?.user = User(name: name, uid: uid)
+                
+            }
+            
+        }
         
         self.loginType = .google
         
@@ -88,7 +112,7 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
                 
                 let userRef = Database.database().reference()
                 
-                userRef.child("Users").child(user!.uid).child("User").setValue(self.userData)
+            userRef.child("Users").child(user!.uid).child("User").setValue(self.userData)
                 
                 self.delegate?.firebaseLogin(loginClient: self,
                                              didSuccessWith: LoginRouter.facebook)

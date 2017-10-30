@@ -95,7 +95,7 @@ extension LoginViewController: FirebaseLoginDelegate {
         mainTabbar.view.frame = rootViewController.view.frame
         mainTabbar.view.layoutIfNeeded()
         
-        UIView.transition(with: window, duration: 0.3, options: .transitionCrossDissolve, animations: {
+        UIView.transition(with: window, duration: 1.0, options: .transitionCrossDissolve, animations: {
             window.rootViewController = mainTabbar
         }, completion: { completed in
             // maybe do something here

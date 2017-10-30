@@ -20,7 +20,6 @@ class DiaryMenuViewController: UIViewController, UICollectionViewDataSource, UIC
         
         didSet {
             
-            self.diaryMenuCollectionView.register(DiaryCollectionViewCell.self, forCellWithReuseIdentifier: cellIdentifier)
             self.diaryMenuCollectionView.collectionViewLayout = LineLayout()
         }
         
@@ -34,6 +33,15 @@ class DiaryMenuViewController: UIViewController, UICollectionViewDataSource, UIC
         self.diaryMenuCollectionView.dataSource = self
 
         self.addDiaryButton.addTarget(self, action: #selector(showAddDiaryBox), for: .touchUpInside)
+        
+        let loadDiaryManager = DiaryManager()
+        
+        loadDiaryManager.diary(diaryRouter: FirebaseRouter.viewDiary([]))
+        
+        loadDiaryManager.delegate = self
+        
+        self.diaryMenuCollectionView.register(UINib.init(nibName: "DiaryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: cellIdentifier)
+        
     }
     
     
@@ -63,15 +71,20 @@ class DiaryMenuViewController: UIViewController, UICollectionViewDataSource, UIC
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return self.diarys.count
         
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let diaryCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as! DiaryCollectionViewCell
+        guard let diaryCell = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath) as? DiaryCollectionViewCell else {
+            return UICollectionViewCell()
+        }
+
         
-        diaryCell.backgroundColor = UIColor.blue
+        diaryCell.backgroundColor = UIColor.gray
+        
+        diaryCell.diaryTitleLabel.text = diarys[indexPath.row].title
         
         return diaryCell
         
@@ -90,11 +103,23 @@ extension DiaryMenuViewController: DiaryManagerDelegate {
     
     func manager(_ manager: DiaryManager, type: FirebaseRouter) {
         
-        print("xd")
+        switch type {
+        case .addDiary(let nonUse):
+            
+            self.childViewControllers[0].removeFromParentViewController()
+            
+            self.view.subviews[self.view.subviews.count - 1].removeFromSuperview()
+            
+        case .viewDiary(let diarys):
+            
+            self.diarys = diarys
+            
+            self.diaryMenuCollectionView.reloadData()
+            
+        }
         
-        self.childViewControllers[0].removeFromParentViewController()
+
         
-        self.view.subviews[self.view.subviews.count - 1].removeFromSuperview()
         
     }
     

@@ -42,7 +42,9 @@ class AddDiaryViewController: UIViewController {
         
         // userName come from facebook or google
         
-        let user = User(name: "aa", uid: uid)
+        let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        let user = appDelegate!.user!
         
         let diary = Diary(title: diaryTitleTextField.text!, users: [user], diaryId: nil)
         

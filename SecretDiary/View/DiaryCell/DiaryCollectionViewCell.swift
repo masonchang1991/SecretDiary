@@ -14,14 +14,13 @@ class DiaryCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var diaryOwnerTableViewBottomConstraint: NSLayoutConstraint!
     
+    @IBOutlet weak var diaryTitleLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        print("awake")
+        
     }
-    
-  
-    
-    
 
 }

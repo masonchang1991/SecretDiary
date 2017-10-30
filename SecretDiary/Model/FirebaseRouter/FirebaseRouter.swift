@@ -13,6 +13,8 @@ enum FirebaseRouter {
     
     case addDiary(Diary)
     
+    case viewDiary([Diary])
+    
     var ref: DatabaseReference {
 
         switch self {
@@ -20,7 +22,10 @@ enum FirebaseRouter {
         case .addDiary :
             
             return Database.database().reference().child("Diarys")
-
+            
+        case .viewDiary:
+            
+            return Database.database().reference().child("Diarys")
         }
 
     }
