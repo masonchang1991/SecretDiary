@@ -10,7 +10,7 @@ import Foundation
 
 protocol DiaryManagerDelegate: class {
     
-    func manager(_ manager: DiaryManager, type: String, ifSuccess: Bool)
+    func manager(_ manager: DiaryManager, type: FirebaseRouter)
     
 }
 
@@ -20,24 +20,21 @@ class DiaryManager {
     
     weak var delegate: DiaryManagerDelegate?
     
-    
     func diary(diaryRouter: FirebaseRouter) {
         
         switch diaryRouter {
             
-        case .addDiary:
+        case .addDiary(let diary):
             
             let client = AddDiaryClient()
             
-            client.addDiary(ref: diaryRouter.ref, completion: { (ifSuccess, type) in
+            client.addDiary(ref: diaryRouter.ref,
+                            diary: diary,
+                            completion: { () in
                 
-                
-                self.delegate?.manager(self, type: type, ifSuccess: ifSuccess)
-                
+                self.delegate?.manager(self, type: diaryRouter)
                 
             })
-            
-
             
         }
         

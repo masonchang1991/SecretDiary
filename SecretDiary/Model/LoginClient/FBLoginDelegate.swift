@@ -10,7 +10,7 @@ import Foundation
 
 protocol FBLoginDelegate:class {
     
-    func fbLoginManager(manager: LoginClient, didGet tokenString: String)
+    func fbLoginManager(manager: LoginClient, didGet tokenString: String, userData: [String: String])
     
     func fbLoginManager(manager: LoginClient, didFailWith error: Error?)
     

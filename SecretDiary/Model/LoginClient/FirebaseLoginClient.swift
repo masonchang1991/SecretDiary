@@ -20,7 +20,9 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
     
     private(set) var delegate: FirebaseLoginDelegate?
     
-    init(fbTokenString: String, loginViewController: UIViewController) {
+    private(set) var userData: [String: String] = [:]
+    
+    init(fbTokenString: String, loginViewController: UIViewController, userData: [String: String]) {
         
         self.loginType = .facebook
         
@@ -30,17 +32,21 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
         
         self.accessToken = fbTokenString
         
+        self.userData = userData
+        
         self.delegate = viewController
         
     }
     
-    init(googleIdTokenString: String, googleAccessTokenString: String, loginViewController: UIViewController?) {
+    init(googleIdTokenString: String, googleAccessTokenString: String, loginViewController: UIViewController?, userData: [String: String]) {
         
         self.accessToken = googleAccessTokenString
         
         self.googleIdToken = googleIdTokenString
         
         self.delegate = loginViewController as? FirebaseLoginDelegate
+        
+        self.userData = userData
         
         self.loginType = .google
         
@@ -80,6 +86,10 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
                 
             } else {
                 
+                let userRef = Database.database().reference()
+                
+                userRef.child("Users").child(user!.uid).child("User").setValue(self.userData)
+                
                 self.delegate?.firebaseLogin(loginClient: self,
                                              didSuccessWith: LoginRouter.facebook)
                 
@@ -106,6 +116,10 @@ class FirebaseLoginClient: LoginClient, FirebaseLogin {
                 return
             }
             // User is signed in
+            
+            let userRef = Database.database().reference()
+            
+            userRef.child("Users").child(user!.uid).child("User").setValue(self.userData)
             
             self.delegate?.firebaseLogin(loginClient: self,
                                          didSuccessWith: LoginRouter.google)

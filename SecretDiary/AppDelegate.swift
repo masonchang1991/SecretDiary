@@ -62,12 +62,23 @@ extension AppDelegate: GIDSignInDelegate {
             // ...
             return
         }
+        var userDic: [String: String] = [:]
+        
+        let name = user.profile.name
+        userDic["name"] = name
+        
+        let email = user.profile.email
+        userDic["email"] = email
+        
+        let picURLString = user.profile.imageURL(withDimension: 120).absoluteString
+            
+        userDic["picURL"] = picURLString
         
         guard let authentication = user.authentication else { return }
         
         let firebaseLoginClient = FirebaseLoginClient(googleIdTokenString: authentication.idToken,
                                                            googleAccessTokenString: authentication.accessToken,
-                                                           loginViewController: googleLoginViewController)
+                                                           loginViewController: googleLoginViewController, userData: userDic)
         
         firebaseLoginClient.login()
         

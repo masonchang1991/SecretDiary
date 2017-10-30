@@ -48,7 +48,7 @@ class DiaryMenuViewController: UIViewController, UICollectionViewDataSource, UIC
         
         addDiaryVC.view.frame = self.view.frame // work
         
-        addDiaryVC .view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
+        addDiaryVC.view.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         
         self.view.addSubview(addDiaryVC.view)
         
@@ -84,4 +84,19 @@ class DiaryMenuViewController: UIViewController, UICollectionViewDataSource, UIC
     
     
 
+}
+
+extension DiaryMenuViewController: DiaryManagerDelegate {
+    
+    func manager(_ manager: DiaryManager, type: FirebaseRouter) {
+        
+        print("xd")
+        
+        self.childViewControllers[0].removeFromParentViewController()
+        
+        self.view.subviews[self.view.subviews.count - 1].removeFromSuperview()
+        
+    }
+    
+    
 }

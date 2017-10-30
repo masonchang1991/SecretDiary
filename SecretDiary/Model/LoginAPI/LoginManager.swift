@@ -19,8 +19,6 @@ class LoginManager {
         
     }
     
-    
-    
     func login(loginType: LoginRouter) {
         
         switch loginType {
@@ -74,19 +72,22 @@ class LoginManager {
 
 extension LoginManager: FBLoginDelegate {
     
-    func fbLoginManager(manager: LoginClient, didGet tokenString: String) {
+    func fbLoginManager(manager: LoginClient, didGet tokenString: String, userData: [String: String]) {
         
         let firebaseLoginClient = FirebaseLoginClient(fbTokenString: tokenString,
-                                                      loginViewController: loginViewController)
+                                                      loginViewController: loginViewController, userData: userData)
         
         firebaseLoginClient.login()
         
         
     }
+
     
     func fbLoginManager(manager: LoginClient, didFailWith error: Error?) {
         
     }
+    
+    
     
 }
 

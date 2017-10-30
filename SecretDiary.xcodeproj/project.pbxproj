@@ -125,8 +125,6 @@
 				936F3B1D1F9DFA1C00E90859 /* DiaryCollectionViewLayout */,
 				933E934C1F8E16C600C69796 /* DiaryCell */,
 				933E93431F8E092200C69796 /* Login */,
-				93FA2E6A1F87FE7D006B9434 /* Main.storyboard */,
-				93FA2E6F1F87FE7D006B9434 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -260,6 +258,8 @@
 				933E93411F8E08E700C69796 /* Model */,
 				9306D9AF1F8909C50012701C /* View */,
 				93FA2E6D1F87FE7D006B9434 /* Assets.xcassets */,
+				93FA2E6F1F87FE7D006B9434 /* LaunchScreen.storyboard */,
+				93FA2E6A1F87FE7D006B9434 /* Main.storyboard */,
 				93FA2E721F87FE7D006B9434 /* Info.plist */,
 				9306D9BE1F892DEE0012701C /* GoogleService-Info.plist */,
 			);

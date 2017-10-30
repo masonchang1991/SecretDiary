@@ -14,6 +14,6 @@ struct Diary {
     
     var users: [User]
     
-    let diaryId: String
+    var diaryId: String?
     
 }

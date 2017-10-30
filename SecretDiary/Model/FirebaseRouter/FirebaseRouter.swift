@@ -11,7 +11,7 @@ import Firebase
 
 enum FirebaseRouter {
     
-    case addDiary
+    case addDiary(Diary)
     
     var ref: DatabaseReference {
 
@@ -24,8 +24,6 @@ enum FirebaseRouter {
         }
 
     }
-    
-    
     
 }
 
